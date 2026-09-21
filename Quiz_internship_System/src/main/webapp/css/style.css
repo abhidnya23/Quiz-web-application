@@ -1,0 +1,185 @@
+/* =========================================
+   ONLINE TEST PAGE STYLES (Two-Column Layout)
+   ========================================= */
+
+/* --- Top Header Bar --- */
+.header {
+    background-color: var(--card-bg, #FFFFFF);
+    color: var(--sidebar-blue, #3A5BCC);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius, 16px);
+    box-shadow: var(--shadow, 0 8px 24px rgba(149, 157, 165, 0.15));
+    margin-bottom: 20px;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#timer {
+    background-color: #FF3D71; /* Timer Red */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(255, 61, 113, 0.3);
+    letter-spacing: 1px;
+}
+
+/* --- Main Layout Container --- */
+.container {
+    display: flex;
+    padding: 0; /* Removing padding as body already has it */
+    gap: 25px;
+    align-items: flex-start; /* Prevents sidebar from stretching full height unnecessarily */
+}
+
+/* --- Left Column: Question Area --- */
+.question-box {
+    flex: 3;
+    background-color: var(--card-bg, #FFFFFF);
+    padding: 40px;
+    border-radius: var(--border-radius, 16px);
+    box-shadow: var(--shadow, 0 8px 24px rgba(149, 157, 165, 0.15));
+}
+
+#questionArea h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--text-dark, #2D3748);
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+/* --- Radio Button Options --- */
+.option {
+    display: block;
+    padding: 15px 20px;
+    border: 2px solid var(--secondary-btn, #E4E9F2);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+    background-color: #FAFCFF;
+    color: var(--text-dark, #2D3748);
+}
+
+.option:hover {
+    border-color: var(--primary-btn, #4772FF);
+    background-color: #F0F4FF;
+}
+
+.option input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* --- Bottom Action Buttons --- */
+.btn {
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-size: 0.95rem;
+    margin-top: 20px;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.btn-prev {
+    background-color: var(--secondary-btn, #E4E9F2);
+    color: var(--text-dark, #2D3748);
+    margin-right: 10px;
+}
+
+.btn-prev:hover {
+    background-color: #D4DAE8;
+}
+
+.btn-next {
+    background-color: var(--primary-btn, #4772FF);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(71, 114, 255, 0.2);
+    margin-right: 10px;
+}
+
+.btn-next:hover {
+    background-color: var(--sidebar-blue, #3A5BCC);
+}
+
+.btn-submit {
+    background-color: #00D68F; /* Success Green */
+    color: #FFFFFF;
+    float: right;
+    box-shadow: 0 4px 12px rgba(0, 214, 143, 0.2);
+}
+
+.btn-submit:hover {
+    background-color: #00B87A;
+}
+
+/* --- Right Column: Sidebar Navigation --- */
+.sidebar {
+    flex: 1;
+    background-color: var(--card-bg, #FFFFFF);
+    padding: 30px;
+    border-radius: var(--border-radius, 16px);
+    box-shadow: var(--shadow, 0 8px 24px rgba(149, 157, 165, 0.15));
+}
+
+.sidebar h4 {
+    margin-top: 0;
+    color: var(--sidebar-blue, #3A5BCC);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-btn, #E4E9F2);
+    padding-bottom: 10px;
+}
+
+#qNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.q-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--card-bg, #FFFFFF);
+    border: 2px solid var(--secondary-btn, #E4E9F2);
+    color: var(--text-muted, #8F9BB3);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.q-num:hover {
+    border-color: var(--primary-btn, #4772FF);
+    color: var(--primary-btn, #4772FF);
+    background-color: #F0F4FF;
+}
+
+.q-active {
+    background-color: var(--primary-btn, #4772FF) !important;
+    color: #FFFFFF !important;
+    border-color: var(--primary-btn, #4772FF) !important;
+    box-shadow: 0 4px 10px rgba(71, 114, 255, 0.3);
+}
